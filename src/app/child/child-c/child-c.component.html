@@ -1,0 +1,17 @@
+<div
+  class="container"
+  style="background-color: rgb(0, 0, 0)"
+>
+  <h3 style="color: aliceblue">Child</h3>
+  <div style="text-align: center;">
+    <div>
+      <h2 style="color: aliceblue">{{mensaje }}</h2>
+    </div>
+    <div>
+      <input type="number" #numero /><br> <br>
+      <button class="btn btn-primary" (click)="onClick(numero.value)">
+        Mostrar
+      </button>
+    </div>
+  </div>
+</div>

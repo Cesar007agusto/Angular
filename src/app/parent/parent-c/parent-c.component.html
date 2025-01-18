@@ -1,0 +1,19 @@
+<div class="container-fluid" style="background-color: rgb(57, 253, 77)">
+  <h3>Parent</h3>
+  <div style="text-align: center">
+    <input type="text" placeholder="Type text" #inputTexto /><br><br>
+    <button (click)="procesarTexto(inputTexto.value)" class="btn btn-primary">
+      ShowFromInput
+    </button><br><br>
+    <button (click)="ShowDataFromService()" class="btn btn-primary">
+      DataFromService
+    </button>
+    <h1>{{receivedMessage}}</h1>
+  </div>
+ 
+
+  <app-child-c 
+  [mensaje]="textoParaHijo" 
+
+  (propiedadEnelHijo)="manejoMensaje($event)"></app-child-c>
+</div>
