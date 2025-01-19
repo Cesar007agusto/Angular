@@ -14,7 +14,8 @@ export class ParentCComponent {
   textoParaHijo:string = " ";  // Mensaje para pasar al hijo
 
   procesarTexto(texto:string){
-    this.miServicio.showmessage(texto,1);
+   // this.miServicio.showmessage(texto,1);
+    this.miDato.alert(texto);
     this.textoParaHijo=texto;
     
   }
@@ -23,18 +24,19 @@ export class ParentCComponent {
   receivedMessage: number=0;  // Variable para almacenar el mensaje recibido
 
   manejoMensaje(event: number) {
-    this.miServicio.showmessage("Data From child-> ",event);
+    //this.miServicio.showmessage("Data From child-> ",event);
     this.receivedMessage = event;  // Guardar el mensaje recibido en la variable
   }
 
   constructor(
-    private miServicio:ServicioEmergenteService,
+    //private miServicio:ServicioEmergenteService,
     private miDato:DataServiceService
   ){
 
   }
 
   ShowDataFromService(){
+    
     this.textoParaHijo=this.miDato.nombre
   }
   

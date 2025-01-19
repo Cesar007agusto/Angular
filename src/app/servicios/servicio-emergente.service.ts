@@ -7,9 +7,9 @@ export class ServicioEmergenteService {
 
   constructor() { }
 
-  showmessage(mensage:String,value:number){
+  showmessage(mensage:String){
     
-    alert(`${mensage} ${value}`);
+    alert(`${mensage} `);
     
 
   }

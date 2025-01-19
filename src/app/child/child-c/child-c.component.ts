@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DataServiceService } from 'src/app/servicios/data-service.service';
 
 
 
@@ -12,16 +13,17 @@ export class ChildCComponent {
   @Input() mensaje: string = ""; //parent to child
   @Output() propiedadEnelHijo = new EventEmitter<number>();//child to parent
 
-  dataFromService:string="";
+  constructor(private miDato:DataServiceService){}
 
   onClick(valor: string) {
+    this.miDato.alert(valor);
     const numero = Number(valor);
     this.propiedadEnelHijo.emit(numero);
   }
 
- 
-  
-  
+
+
+
 
 
 
